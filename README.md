@@ -1,5 +1,4 @@
-# systemtooling
-System tooling with Go
+# System tooling with Go
 ```sh 
 #install cobra
 go get -u github.com/spf13/cobra/cobra
