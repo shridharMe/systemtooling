@@ -1,4 +1,5 @@
 /*
+This sample example is directly picked from  linuxacademy training session.
 Copyright © 2020 NAME HERE <EMAIL ADDRESS>
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -29,8 +30,8 @@ var preview bool
 var prompt bool
 var debug bool = false
 
-// rootCmd represents the base command when called without any subcommands
-var rootCmd = &cobra.Command{
+// motdCmd represents the base command when called without any subcommands
+var motdCmd = &cobra.Command{
 	Use:   "motd",
 	Short: "A utility to customize the Message of the Day (MOTD)",
 	Long:  ``,
@@ -97,20 +98,12 @@ func renderPrompt() (name, greeting string) {
 	return
 }
 
-// Execute adds all child commands to the root command and sets flags appropriately.
-// This is called by main.main(). It only needs to happen once to the rootCmd.
-func Execute() {
-	if err := rootCmd.Execute(); err != nil {
-		fmt.Println(err)
-		os.Exit(1)
-	}
-}
 
 func init() {
-	rootCmd.Flags().StringVarP(&name, "name", "n", "", "Name to use in message")
-	rootCmd.Flags().StringVarP(&greeting, "greeting", "g", "", "Greeting to use in message")
-	rootCmd.Flags().BoolVarP(&preview, "preview", "v", false, "Preview message instead of writing to /etc/motd")
-	rootCmd.Flags().BoolVarP(&prompt, "prompt", "p", false, "Prompt for name and greeting")
+	motdCmd.Flags().StringVarP(&name, "name", "n", "", "Name to use in message")
+	motdCmd.Flags().StringVarP(&greeting, "greeting", "g", "", "Greeting to use in message")
+	motdCmd.Flags().BoolVarP(&preview, "preview", "v", false, "Preview message instead of writing to /etc/motd")
+	motdCmd.Flags().BoolVarP(&prompt, "prompt", "p", false, "Prompt for name and greeting")
 
 	if os.Getenv("DEBUG") != "" {
 		debug = true

@@ -1,4 +1,7 @@
 # System tooling with Go
+Inspired by the linuxacademy training lesson on System Tooling with Go
+https://linuxacademy.com/cp/modules/view/id/291
+
 ```sh 
 #install cobra
 go get -u github.com/spf13/cobra/cobra

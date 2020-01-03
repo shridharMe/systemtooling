@@ -15,7 +15,7 @@ limitations under the License.
 */
 package main
 
-import "github.com/shridharMe/systemtooling/motd/cmd"
+import "github.com/shridharMe/systemtooling/gokli/cmd"
 
 func main() {
 	cmd.Execute()
