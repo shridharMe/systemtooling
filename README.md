@@ -7,12 +7,12 @@ https://linuxacademy.com/cp/modules/view/id/291
 go get -u github.com/spf13/cobra/cobra
 
 #create cobra project for command line tool
-cobra init --pkg-name github.com/shridharMe/systemtooling/motd shridharMe/systemtooling/motd
+cobra init --pkg-name github.com/shridharMe/systemtooling/motd shridharMe/systemtooling/gokli
 
 # to run the project
-
 go get github/shridharMe/systemtooling
 cd github.com/shridharMe/systemtooling
-go run motd/main.go
+
+go run gokli/main.go --help
 
 ```
